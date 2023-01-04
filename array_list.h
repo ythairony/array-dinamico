@@ -28,8 +28,11 @@ int list_size(list l);
 
 int list_capacity(list l);
 
-int array_list_get(list l, int index, int *error);
+int array_list_find(list l, int element);
 
-unsigned int array_list_push_back(list l, int value);
+// int array_list_get(list l, int index, int *error);
+
+// unsigned int array_list_push_back(list l, int value);
+
 
 #endif

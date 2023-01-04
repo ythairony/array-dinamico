@@ -15,5 +15,11 @@ int main(){
     printf("Used: %d\n",list_size(l01));
     printf("Capa: %d\n",list_capacity(l01));
     list_destroy(l01);
+  
+    int e, ind;
+    scanf("%d", &e);
+    ind = array_list_find(l01, e);
+    printf("Índice - %d\n", ind);
+    
     return 0;
 }

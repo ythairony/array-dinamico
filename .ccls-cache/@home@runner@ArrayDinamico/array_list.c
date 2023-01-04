@@ -84,22 +84,34 @@ int list_capacity(list l){
     return l->capacity;
 }
 
-int array_list_get(list l, int index, int *error) {
+/*int array_list_get(list l, int index, int *error) {
   *error = 0;
-  if (index < 0 || index >= l->used) {/* Index must be valid*/
+  if (index < 0 || index >= l->used) {
     *error = 1;
     return 0;
   }
   return l->data[index];
 }
-
+*/
+/*
 unsigned int array_list_push_back(list l, int value) {
   if (l->capacity == l->used) {
-    if (!increase_memory(l)) /* Need to increase memory */
+    if (!increase_memory(l)) 
       return array_list_size(l);
   }
   l->data[l->used] = value;
   l->used++;
   return array_list_size(l);
+}
+*/
+
+int array_list_find(list l, int element) {
+  int i;
+  for (i = 0; i < list_size(l); ++i) {
+    if (list_get(l, i) == element) 
+      return i;
+  }
+  
+  return -1;
 }
 

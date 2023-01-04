@@ -76,9 +76,9 @@ unsigned int array_list_size(array_list_int *list) {
 /**
  * \todo Implement function
  */
-int array_list_find(array_list_int *list, int element) { 
+/*int array_list_find(array_list_int *list, int element) { 
   return -1;
-}
+}*/
 
 /**
  * \todo Implement function

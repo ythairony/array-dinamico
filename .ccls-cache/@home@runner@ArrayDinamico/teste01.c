@@ -25,7 +25,7 @@ void print_vector(array_list_int *l) {
   printf("\n");
 }
 
-int main() {
+int main2() {
   time_t inicio, fim;
   int n, i, x;
   array_list_int *l01 = array_list_create();
