@@ -106,12 +106,15 @@ unsigned int array_list_push_back(list l, int value) {
 */
 
 int array_list_find(list l, int element) {
-  int i;
-  for (i = 0; i < list_size(l); ++i) {
-    if (list_get(l, i) == element) 
-      return i;
+  int i, x, ind = -1;
+  for (i = 0; i < list_size(l); i++) {
+    x = list_get(l, i);
+    if (x == element) {
+      ind = i;
+      break;
+    }
   }
   
-  return -1;
+  return ind;
 }
 
