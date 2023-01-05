@@ -84,26 +84,6 @@ int list_capacity(list l){
     return l->capacity;
 }
 
-/*int array_list_get(list l, int index, int *error) {
-  *error = 0;
-  if (index < 0 || index >= l->used) {
-    *error = 1;
-    return 0;
-  }
-  return l->data[index];
-}
-*/
-/*
-unsigned int array_list_push_back(list l, int value) {
-  if (l->capacity == l->used) {
-    if (!increase_memory(l)) 
-      return array_list_size(l);
-  }
-  l->data[l->used] = value;
-  l->used++;
-  return array_list_size(l);
-}
-*/
 
 int array_list_find(list l, int element) {
   int i, x, ind = -1;
@@ -117,4 +97,15 @@ int array_list_find(list l, int element) {
   
   return ind;
 }
+
+unsigned int array_list_pop_back(list l) {
+  if (l->used == 0) return -1;
+  int j,*new_data = (int*)malloc(sizeof(int)*(l->capacity));
+  for (j=0 ; j<(l->used - 1) ; ++j)
+    new_data[j]=l->data[j];
+  int *old_data = l->data;
+  l->data = new_data;
+  free(old_data);
+  return *new_data;
+} 
 
