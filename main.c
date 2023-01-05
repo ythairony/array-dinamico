@@ -5,7 +5,7 @@
 
 int main(){
     clock_t inicio, fim;
-    list l01 = list_create_dobra();
+    list l01 = list_create_10mil();
     int num, i;
     inicio = clock();
     while (scanf("%d",&num), num!=-1){
@@ -15,8 +15,8 @@ int main(){
     double tempo = (fim - inicio)/(CLOCKS_PER_SEC/1000.0);
   
     /* Processamento dos dados */
-    for (i=0 ; i<list_size(l01) ; ++i)
-        printf("%d ",list_get(l01,i));
+    /*for (i=0 ; i<list_size(l01) ; ++i)
+        printf("%d ",list_get(l01,i));*/
     printf("\n");
     printf("Used: %d\n",list_size(l01));
     printf("Capa: %d\n",list_capacity(l01));

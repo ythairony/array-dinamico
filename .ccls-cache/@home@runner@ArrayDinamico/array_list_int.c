@@ -65,10 +65,10 @@ unsigned int array_list_push_back(array_list_int *list, int value) {
 /**
  * \todo Implement function
  */
-unsigned int array_list_pop_back(array_list_int *list) {
+/*unsigned int array_list_pop_back(array_list_int *list) {
   return array_list_size(list);
 }
-
+*/
 unsigned int array_list_size(array_list_int *list) {
    return list->size;
 }
