@@ -7,6 +7,14 @@ struct array_list{
       used;
 };
 
+struct ld_int_node {
+  int value;
+  struct ld_int_node *next, *prev;
+};
+
+struct ld_int{
+  struct ld_int_node *head, *tail;
+};
 
 
 /*

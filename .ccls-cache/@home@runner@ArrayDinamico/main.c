@@ -4,19 +4,9 @@
 #include <time.h>
 
 int main(){
-    /*clock_t inicio, fim;
-    list l01 = list_create_10mil();
-    int *l;
-    int num, i;
-    inicio = clock();
-    while (scanf("%d",&num), num!=-1){
-        append_ldl(); 
-    }
-    fim = clock();
-    double tempo = (fim - inicio)/(CLOCKS_PER_SEC/1000.0);
-    */
+    
     clock_t inicio, fim;
-    list l01 = list_create_10mil();
+    list l01 = list_create_10();
     int num, i;
     inicio = clock();
     while (scanf("%d",&num), num!=-1){
@@ -37,12 +27,13 @@ int main(){
 
 
     // Pegando índice de algum elemento  
-    /*
+    clock_t in, fi;
     int e, ind;
-    scanf("%d", &e);
-    ind = array_list_find(l01, e);
-    printf("Índice = %d\n", ind);
-    */
+    in = clock();
+    array_list_pop_back(l01);
+    fi = clock();
+    double te = (fi - in)/(CLOCKS_PER_SEC/1000.0);
+    printf("Tempo decorrido: %lf ms\n", te);
 
     
     return 0;

@@ -109,14 +109,6 @@ unsigned int array_list_pop_back(list l) {
   return *new_data;
 } 
 
-struct ld_int_node {
-  int value;
-  struct ld_int_node *next, *prev;
-};
-
-struct ld_int{
-  struct ld_int_node *head, *tail;
-};
 
 void append_ldl(struct ld_int *l, int v) {
   struct ld_int_node * new_node = (struct ld_int_node *) malloc(sizeof(struct ld_int_node));
