@@ -122,3 +122,57 @@ void append_ldl(struct ld_int *l, int v) {
     new_node->next->prev = new_node;
   }
 }
+
+void inserir_inicio(struct ld_int *l, int v) {
+struct ld_int_node * new_node = (struct ld_int_node *) malloc(sizeof(struct ld_int_node));
+new_node->value = v;
+new_node->next = l->head;
+new_node->prev = 0;
+l->head = new_node;
+if (new_node->next == 0) {
+l->tail = new_node;
+} else {
+new_node->next->prev = new_node;
+}
+}
+
+/* métodos que não implementados
+
+void inserir_fim(ll_int l, int v) {
+struct ll_int_node * new_node;
+new_node = (struct ll_int_node*) malloc(sizeof(struct ll_int_node));
+new_node->value = v;
+new_node->next = 0;
+if (l->last == 0)
+	l->first = new_node;
+else
+	l->last->next = new_node;
+l->last=new_node;
+}
+
+int remover_inicio(ll_int l) {
+if (l->first == 0)
+	return -1;
+int r = l->first->value;
+struct ll_int_node *old_node = l->first;
+l->first = l->first->next;
+free(old_node);
+return r;
+}
+
+int remove_fim(ll_int l ){
+if (l->first==0) return -1;
+if (l->first!=0 && l->next==0) {
+free(l->first);
+return -1;
+}
+int r = l->last->value;
+struct ll_int_node *new_last = l->first;
+while (new_last->next != l->last)
+	new_last = new_last->next;
+new_last->next=0;
+free(l->last);
+l->last = new_last;
+return;
+}
+*/

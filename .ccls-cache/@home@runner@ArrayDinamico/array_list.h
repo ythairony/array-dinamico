@@ -31,6 +31,7 @@ unsigned int size;
 */
 
 typedef struct array_list* list;
+typedef struct ll_int ll_int;
 
 
 list list_create_10();
@@ -58,5 +59,11 @@ int array_list_find(list l, int element);
 unsigned int array_list_pop_back(list l);
 
 void append_ldl(struct ld_int *l, int v);
+
+void inserir_inicio(struct ld_int *l, int v);
+
+//void inserir_fim(ll_int l, int v);
+
+//int remove_fim(ll_int l);
 
 #endif

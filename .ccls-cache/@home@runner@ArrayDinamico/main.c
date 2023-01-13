@@ -10,7 +10,7 @@ int main(){
     int num, i;
     inicio = clock();
     while (scanf("%d",&num), num!=-1){
-        list_append_10mil(l01,num); 
+        list_append_10(l01,num); 
     }
     fim = clock();
     double tempo = (fim - inicio)/(CLOCKS_PER_SEC/1000.0);
